@@ -10,7 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_06_140209) do
+ActiveRecord::Schema.define(version: 2020_04_06_143113) do
+
+  create_table "answer_choices", force: :cascade do |t|
+    t.string "text"
+    t.integer "question_id"
+  end
 
   create_table "answerchoices", force: :cascade do |t|
     t.string "text"
